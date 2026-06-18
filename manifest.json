@@ -1,0 +1,35 @@
+{
+  "name": "Daily Learning Tracker",
+  "short_name": "LearnDaily",
+  "description": "Log what you learn each day, build a streak, and track your progress over time.",
+  "id": "/",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#6366f1",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["education", "productivity", "lifestyle"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

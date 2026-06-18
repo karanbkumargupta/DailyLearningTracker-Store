@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#6366f1" />
+  <meta name="description" content="Log what you learn each day, build a streak, and track your progress over time." />
+  <title>Daily Learning Tracker</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <div class="logo" aria-hidden="true">📚</div>
+      <div>
+        <h1 class="app__title">Daily Learning Tracker</h1>
+        <p class="app__subtitle">Learn something new every day.</p>
+      </div>
+    </header>
+
+    <section class="stats" aria-label="Your progress">
+      <div class="stat">
+        <span class="stat__icon" aria-hidden="true">🔥</span>
+        <span class="stat__value" id="stat-streak">0</span>
+        <span class="stat__label">Day Streak</span>
+      </div>
+      <div class="stat">
+        <span class="stat__icon" aria-hidden="true">📝</span>
+        <span class="stat__value" id="stat-count">0</span>
+        <span class="stat__label">Total Logs</span>
+      </div>
+      <div class="stat">
+        <span class="stat__icon" aria-hidden="true">📅</span>
+        <span class="stat__value" id="stat-days">0</span>
+        <span class="stat__label">Days Learned</span>
+      </div>
+    </section>
+
+    <section class="logger" aria-label="Add a new entry">
+      <form id="log-form" class="logger__form">
+        <label class="logger__label" for="log-input">What did you learn today?</label>
+        <textarea
+          id="log-input"
+          class="logger__input"
+          rows="3"
+          maxlength="500"
+          placeholder="e.g. Learned how CSS grid auto-placement works…"
+          required
+        ></textarea>
+        <div class="logger__actions">
+          <span class="logger__hint">Tip: press Ctrl + Enter to save</span>
+          <button type="submit" class="btn btn--primary">Log it</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="entries" aria-label="Your learning history">
+      <h2 class="entries__title">History</h2>
+      <p id="empty-state" class="entries__empty">
+        Nothing logged yet. Add your first learning above to start a streak! ✨
+      </p>
+      <ul id="entry-list" class="entries__list"></ul>
+    </section>
+
+    <footer class="app__footer">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>·</span>
+      <span>All data stays on your device.</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
